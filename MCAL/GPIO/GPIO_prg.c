@@ -324,7 +324,7 @@ void MGPIO_vSetAlt(u8 A_u8PortID ,u8 A_u8PinNum,u8 A_u8AFx)
 					default:
 						break;
 				}}
-						else if (A_u8PinNum>7 & A_u8PinNum<16)
+						else if ((A_u8PinNum>7) &( A_u8PinNum<16))
 						{
 							switch(A_u8PortID)
 							{
@@ -392,7 +392,7 @@ void MGPIO_vSetPinVaAtomic(u8 A_u8PortID ,u8 A_u8PinNum,u8 A_u8Value)
 					}
 				}
 }
-void MGPIO_vInit(GPIOx_PinCinfig_t* A_xPinCfg)
+void MGPIO_vInit(GPIOx_PinConfig_t* A_xPinCfg)
 {
 	MGPIO_vSetMode(A_xPinCfg->Port, A_xPinCfg->Pin, A_xPinCfg->Mode);
 	MGPIO_vSetOutputType(A_xPinCfg->Port, A_xPinCfg->Pin, A_xPinCfg->OutputType);

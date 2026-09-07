@@ -8,7 +8,7 @@
 #ifndef HAL_SEVEN_SEGMENT_SEVEN_SEGMENT_INT_H_
 #define HAL_SEVEN_SEGMENT_SEVEN_SEGMENT_INT_H_
 
-void MSEVENSEG_vDisplay(u8 A_u8Num);
+void HSEVENSEG_vDisplay(u8 A_u8Num);
 
 
 
