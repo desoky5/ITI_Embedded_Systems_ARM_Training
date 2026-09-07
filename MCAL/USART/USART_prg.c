@@ -117,10 +117,10 @@ void MUSART_vSendString(char* A_u8ptrStr)
 		MUSART_vSendData(A_u8ptrStr[L_u8Index++]);
 
 }
+
 u8*  MUSART_u8ptrReceiveString(void) // check '\r' | '\n'
 {
 	u8 L_u8index = 0;
-	// carrige return
 	u8 ch ;
 
 	while((ch = MUSART_u8ReceiveData()) != '\r' && ch != '\n')
@@ -131,6 +131,8 @@ u8*  MUSART_u8ptrReceiveString(void) // check '\r' | '\n'
 	G_Buffer[L_u8index] = '\0';
 	return G_Buffer;
 }
+
+
 
 void MUSART_vUSARTCallBack(u8 A_u8USARTNo, void(*Fptr)(void))
 {
