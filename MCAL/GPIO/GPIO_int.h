@@ -1,5 +1,5 @@
 /*
- * GPIO_int.h
+   * GPIO_int.h
  *
  *  Created on: Aug 19, 2026
  *      Author: Omar Desoky
@@ -15,7 +15,7 @@ typedef struct{
 	u8 OutputSpeed;
 	u8 PullType;
 	u8 AltFunc;
-}GPIOx_PinCinfig_t;
+}GPIOx_PinConfig_t;
 
 #define GPIO_LOW 0
 #define GPIO_HIGH 1
@@ -42,8 +42,24 @@ typedef struct{
 #define GPIO_PIN14 14
 #define GPIO_PIN15 15
 
-
-//GPIO mode Macros
+//Set Alternate Functions
+#define GPIO_AF0 0b0000
+#define GPIO_AF1 0b0001
+#define GPIO_AF2 0b0010
+#define GPIO_AF3 0b0011
+#define GPIO_AF4 0b0100
+#define GPIO_AF5 0b0101
+#define GPIO_AF6 0b0110
+#define GPIO_AF7 0b0111
+#define GPIO_AF8 0b1000
+#define GPIO_AF9 0b1001
+#define GPIO_AF10 0b1010
+#define GPIO_AF11 0b1011
+#define GPIO_AF12 0b1100
+#define GPIO_AF13 0b1101
+#define GPIO_AF14 0b1110
+#define GPIO_AF15 0b1111
+//GPIO mode Macrs
 
 
 #define GPIO_Input   0b00
@@ -59,8 +75,8 @@ typedef struct{
 
 
 #define	GPIO_OT_NOPULL 	 0b00
-#define	GPIO_OT_PULLUP   0b01,
-#define	GPIO_OT_PULLDOWN 0b10,
+#define	GPIO_OT_PULLUP   0b01
+#define	GPIO_OT_PULLDOWN 0b10
 
 //Output Speed Modes
 #define Output_low_speed 		0b00
@@ -108,7 +124,7 @@ typedef enum {
    HAF15 = 0b1111,
 }AFH;
 
-void MGPIO_vInit(GPIOx_PinCinfig_t* A_xPinCfg);
+void MGPIO_vInit(GPIOx_PinConfig_t* A_xPinCfg);
 
 void MGPIO_vSetMode(u8 A_u8PortID ,u8 A_u8PinNum,u8 A_u8Mode);
 
